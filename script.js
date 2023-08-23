@@ -19,8 +19,7 @@ function pickyLucky() {
   const randomIndex = Math.round(Math.random() * randomLucky.length)
   const choosePhrase = randomLucky[randomIndex]
 
-  const contentElement = document.querySelector('.content p')
-  contentElement.textContent = choosePhrase
+  document.querySelector('.content p').textContent = choosePhrase;
 }
 
 function togglePage() {
