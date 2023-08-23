@@ -65,6 +65,10 @@ p {
   display: none;
 }
 
+.pageOne img {
+  width: 100%;
+}
+
 .pageOne img:hover {
   animation: shake 0.7s infinite;
 }
@@ -100,6 +104,7 @@ p {
 
 .pageTwo img {
   margin: 4.2rem auto;
+  width: 100%;
 }
 
 button {
