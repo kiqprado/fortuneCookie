@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Dancing+Script&family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg: linear-gradient(45deg, #190361 0%, #b0f 100%);
+  --white: #fff;
+  --black: #000;
+  --tittle: #34355b;
+  --p-bg: #e4edf1;
+  --bg-btn: #ff9500;
+  --btn-hover: #f87123;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--bg);
+  animation: bgChange 22s ease infinite;
+
+  font-family: 'DM Sans', sans-serif;
+}
+
+main {
+  width: min(42.8rem, 80%);
+  margin: 0 auto;
+  padding: 4.8rem 6.4rem 6.4rem;
+
+  border-radius: 0.5rem;
+  background: var(--white);
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.8);
+}
+
+/* ====== FIRST PAGE ======= */
+
+h1,
+h2 {
+  color: var(--tittle);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+p {
+  color: var(--tittle);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  margin: 1.4rem 0 2.6rem;
+}
+
+.hide {
+  display: none;
+}
+
+.pageOne img:hover {
+  animation: shake 0.7s infinite;
+}
+
+/* Ao passar o mouse por cima, a animação é pausada */
+.biscoito:hover {
+  animation-play-state: paused;
+}
+
+/* ====== SECOND PAGE ======= */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  align-items: center;
+}
+
+.pageTwo p {
+  position: relative;
+
+  color: var(--black);
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+  font-weight: 400;
+
+  background: var(--p-bg);
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+
+  animation: slideUp 1s ease-out;
+}
+
+.pageTwo img {
+  margin: 4.2rem auto;
+}
+
+button {
+  border-radius: 0.4rem;
+  background: var(--bg-btn);
+
+  width: 17.4rem;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  box-shadow: 0 0.4rem 0.6rem 0 rgba(0, 0, 0, 0.7);
+
+  transition: all 350ms ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: var(--btn-hover);
+  box-shadow: 0 0.6rem 0.8rem 0 rgba(0, 0, 0, 0.7);
+}
+
+/* ==== KEYFRAME ==== */
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-0.5rem);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(0.5rem);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(22.2rem) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-2.2rem) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bgChange {
+  0% {
+    background: linear-gradient(45deg, #190361 0%, #b0f 100%);
+  }
+  10% {
+    background: linear-gradient(90deg, #400072 0%, #b0f 100%);
+  }
+  20% {
+    background: linear-gradient(45deg, #800083 0%, #b0f 100%);
+  }
+  30% {
+    background: linear-gradient(90deg, #b00094 0%, #b0f 100%);
+  }
+  40% {
+    background: linear-gradient(45deg, #e000a5 0%, #b0f 100%);
+  }
+  50% {
+    background: linear-gradient(90deg, #e000a5 0%, #b0f 100%);
+  }
+  60% {
+    background: linear-gradient(45deg, #b00094 0%, #b0f 100%);
+  }
+  70% {
+    background: linear-gradient(90deg, #800083 0%, #b0f 100%);
+  }
+  80% {
+    background: linear-gradient(45deg, #400072 0%, #b0f 100%);
+  }
+  90% {
+    background: linear-gradient(90deg, #190361 0%, #b0f 100%);
+  }
+}
